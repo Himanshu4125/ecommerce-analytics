@@ -37,7 +37,7 @@
             flex: 1 0 auto;
         }
         h1 {
-            font-family: 'Montserrat', 'Inter', Arial, sans-serif;
+            font-family: 'Montserrat', cursive, sans-serif;
             font-size: 2.7rem;
             font-weight: 700;
             margin-bottom: 10px;
@@ -84,7 +84,7 @@
             border: 1px solid #d1d5db;
             border-radius: 8px;
             font-size: 1rem;
-            background: #fff;
+            background: #f5f2f2;
             color: var(--text-main);
             outline: none;
             transition: border 0.2s;
@@ -101,7 +101,7 @@
             font-size: 1rem;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.1s;
         }
         .date-form button:hover {
             background: var(--accent);
@@ -262,7 +262,7 @@
         </div>
     </div>
     <footer>
-        &copy; {{ now|date:'Y' }} E-commerce Analysis Dashboard &mdash; Crafted by <a class="footer-link" href="https://github.com/Himanshu4125" target="_blank" rel="noopener">Himanshu</a>
+        &copy; {{ now|date:'Y' }} E-commerce Analysis Dashboard &mdash; Crafted by <a class="footer-link" href="https://github.com/Himanshu4125" target="_blank" rel="noopener">HIMANSHU</a>
     </footer>
     <script>
         {% if has_monthly_sales %}Plotly.newPlot('monthly_sales', JSON.parse('{{ monthly_sales_json|escapejs }}').data, JSON.parse('{{ monthly_sales_json|escapejs }}').layout, {responsive: true});{% endif %}
@@ -281,7 +281,7 @@
         var salesByCat = document.getElementById('sales_by_cat');
         if (salesByCat) {
             salesByCat.on('plotly_click', function(data) {
-                var category = data.points[0].x;
+                var category = data.points[0].y;
                 var params = new URLSearchParams(window.location.search);
                 params.set('category', category);
                 // preserve date range and month
@@ -298,7 +298,7 @@
         var monthlySales = document.getElementById('monthly_sales');
         if (monthlySales) {
             monthlySales.on('plotly_click', function(data) {
-                var month = data.points[0].x;
+                var month = data.points[0].y;
                 var params = new URLSearchParams(window.location.search);
                 params.set('month', month);
                 // preserve date range and category
