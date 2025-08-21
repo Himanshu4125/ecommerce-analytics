@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Ecommerce Analysis Dashboard
 
 An interactive E-commerce Sales Analysis Dashboard built with **Django**, **Pandas**, and **Plotly.js**.
@@ -79,11 +78,3 @@ Ecommerce Analysis/
 └── README.md
 ```
 
-## 🙋‍♂️ Contributing
-Pull requests and suggestions are welcome!
-
-## 📜 License
-MIT (or specify your license)
-=======
-# E-commerce-Analysis
->>>>>>> 02db4d203c737c0093b37b2321f49dc1b057c927
